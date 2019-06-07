@@ -9,15 +9,15 @@ import './DrumMachine.css';
 //  and an inner text that corresponds to one of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. 
 //  The drum pads MUST be in this order.
 const DrumKeys = [
-  {key: "Q", audioDesc: "Q", fileName:"Clap-clap.wav"},
-  {key: "W", audioDesc: "W", fileName:"Quarter-clap.wav"},
-  {key: "E", audioDesc: "E", fileName:"Taxi-clap.wav"},
-  {key: "A", audioDesc: "A", fileName:"Damn-hat.wav"},
-  {key: "S", audioDesc: "S", fileName:"Kraft-hat.wav"},
-  {key: "D", audioDesc: "D", fileName:"Superb-hat.wav"},
-  {key: "Z", audioDesc: "Z", fileName:"Dynamite-snare.wav"},
-  {key: "X", audioDesc: "X", fileName:"Lame-snare.wav"},
-  {key: "C", audioDesc: "C", fileName:"Hashbrown-kick.wav"},
+  {key: "Q", audioDesc: "Clap Clap", fileName:"Clap-clap.wav"},
+  {key: "W", audioDesc: "Quarter Clap", fileName:"Quarter-clap.wav"},
+  {key: "E", audioDesc: "Taxi Clap", fileName:"Taxi-clap.wav"},
+  {key: "A", audioDesc: "Damn Hat", fileName:"Damn-hat.wav"},
+  {key: "S", audioDesc: "Kraft Hat", fileName:"Kraft-hat.wav"},
+  {key: "D", audioDesc: "Superb Hat", fileName:"Superb-hat.wav"},
+  {key: "Z", audioDesc: "Dynamite Snare", fileName:"Dynamite-snare.wav"},
+  {key: "X", audioDesc: "Lame Snare", fileName:"Lame-snare.wav"},
+  {key: "C", audioDesc: "Hashbrown Kick", fileName:"Hashbrown-kick.wav"},
 ]
 
 class DrumMachine extends React.Component {
