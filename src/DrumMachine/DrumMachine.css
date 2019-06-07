@@ -2,9 +2,7 @@
   width: fit-content;
   height: fit-content;
   background-color: rgb(221, 221, 221);
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
+  box-shadow: 0px 0px 8px 1px #000000;
 }
 
 .drum-key-grid{
@@ -18,9 +16,34 @@
 }
 
 .drum-key-container {
+  margin: auto;
   width: fit-content;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.drum-display-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5em auto;
+  padding: 1em;
+}
+
+.drum-display {
+  padding: 0.25em 1em;
+  margin: 0.25em 0;
+  background-color: rgb(41, 41, 41);
+  color:  rgb(221, 221, 221);
+}
+
+.drum-display-label {
+  padding: 0.25em 1em;
+  margin: 0.25em 0;
+  background-color: rgb(41, 41, 41);
+  color:  rgb(221, 221, 221);
 }

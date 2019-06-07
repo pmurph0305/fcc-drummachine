@@ -22,6 +22,22 @@ const DrumKeys = [
 
 class DrumMachine extends React.Component {
 
+  constructor(props) {
+    super(props);
+    // User Story #7: When a .drum-pad is triggered, a string describing the associated audio clip is displayed as
+    // the inner text of the #display element (each string must be unique).
+    this.state = {
+      display: 'None'
+    }
+  }
+
+
+  onPlaySound = (index) => {
+    if (index < DrumKeys.length) {
+      this.setState({display: DrumKeys[index].audioDesc})
+    }
+  }
+
   render() {
     return (
       // User Story #1: I should be able to see an outer container
@@ -29,11 +45,14 @@ class DrumMachine extends React.Component {
       <div className="drum-machine" id="drum-machine">
         <div className="drum-key-container">
           <div className="drum-key-grid">
-            {DrumKeys.map(drum => <DrumPad key={drum.key} keyVal={drum.key} audioDesc={drum.audioDesc} fileName={drum.fileName}/>)}
+            {DrumKeys.map((drum, index) => <DrumPad key={drum.key} keyVal={drum.key} audioDesc={drum.audioDesc} fileName={drum.fileName} onPlaySound={this.onPlaySound} keyIndex={index}/>)}
           </div>
         </div>
+        <div className="drum-display-container">
         {/* User Story #2: Within #drum-machine I can see an element with a corresponding id="display". */}
-        <p className="drum-display" id="display">CurrentDrumKey</p>
+          <label htmlFor="display" className="drum-display-label">Last Sound</label>
+          <p className="drum-display" id="display">{this.state.display}</p>
+        </div>
       </div>
     )
   }

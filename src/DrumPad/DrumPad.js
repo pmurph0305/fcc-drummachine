@@ -28,12 +28,13 @@ class DrumPad extends React.Component {
   onClick = () => {
     let audioElement = document.getElementById(this.props.keyVal);
     audioElement.play();
+    this.props.onPlaySound(this.props.keyIndex);
   }
 
   render() {
   const {keyVal, audioDesc, fileName} = this.props;
   return (
-    <button className="btn btn-primary drum-pad" id={audioDesc} onClick={this.onClick}>
+    <button className="drum-pad" id={audioDesc} onClick={this.onClick}>
     {keyVal}
     {/*  Within each .drum-pad, there should be an HTML5 <audio> element which has a src attribute pointing to an audio clip, a class name of "clip", and an id corresponding to the inner text of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.). */}
       <audio className="clip" id={keyVal}  src={process.env.PUBLIC_URL +"/DrumSamples/"+fileName} type="audio/wav"/>
