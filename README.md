@@ -8,6 +8,6 @@ It is a drum machine app, you can click the buttons or press the keys and the au
 
 It was created using React, and deployed with gh-pages.
 
-You can test it locally by running `npm start`
+You can run it locally with `npm start`
 
 Or you can visit the website in the description above to view the gh-pages version.
